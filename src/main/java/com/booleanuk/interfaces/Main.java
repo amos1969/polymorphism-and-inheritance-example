@@ -17,11 +17,11 @@ public class Main {
         System.out.println("Inventory");
         System.out.println("=========");
         for (Item thing : inventory) {
-            System.out.println(thing.getDescription());
+            if (thing instanceof Clothing) {
+                System.out.println(thing.getDescription() + " - " + ((Clothing) thing).getMaterial());
+            } else {
+                System.out.println(thing.getDescription());
+            }
         }
-
-
-
-
     }
 }
